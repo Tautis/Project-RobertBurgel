@@ -8,18 +8,17 @@ interface CardPageParams {
   heading: string;
 }
 
-interface PageProps {
-  params: CardPageParams;
-}
+export default async function CardPage({ params }: { params: CardPageParams }) {
+  const { heading } = await params;
 
-export default function CardPage({ params }: PageProps) {
-  const decodedHeading = decodeURIComponent(params.heading);
+  const decodedHeading = decodeURIComponent(heading);
   const card = cardData.find((card) => card.heading === decodedHeading);
   const headingsArray = cardData.map((card) => card.heading);
 
   if (!card) {
     notFound();
   }
+
   const galleryImages = card.gallery ? Object.values(card.gallery) : [];
 
   return (
