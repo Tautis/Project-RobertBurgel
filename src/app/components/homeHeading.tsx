@@ -53,7 +53,7 @@ export default function HomeHeading() {
     }
   }, [isClient]);
   return (
-    <div className=" z-0 overflow-hidden">
+    <div className="z-0 overflow-hidden">
       <div className="lottie-container">
         <Lottie animationData={animationData} />
       </div>
@@ -69,7 +69,7 @@ export default function HomeHeading() {
         </p>
       </div>
       <div
-        className="absolute lg:bottom-5 bottom-64 left-1/2 -translate-x-[10px] w-fit mx-auto pt-32"
+        className="absolute lg:top-[700px] top-[400px] left-1/2 -translate-x-[10px] w-fit mx-auto pt-32"
         id="arrow"
       >
         <Link href="#start">
