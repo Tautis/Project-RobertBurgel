@@ -20,7 +20,7 @@ import HomeHeading from "./components/homeHeading";
 export default function Home() {
   return (
     <div className="">
-      <div className="fixed z-50 bottom-5 right-10 overflow-hidden">
+      {/* <div className="fixed z-50 bottom-5 right-10 overflow-hidden">
         <Link href="#start">
           <Arrowx rotation={270} width="30px" height="30px" color="gray" />
         </Link>
@@ -226,7 +226,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
