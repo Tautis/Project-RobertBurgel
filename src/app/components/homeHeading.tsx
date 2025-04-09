@@ -5,8 +5,8 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import Lottie from "lottie-react";
-import animationData from "../../../public/lottieAnim.json";
+// import Lottie from "lottie-react";
+// import animationData from "../../../public/lottieAnim.json";
 import Lenis from "lenis";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,14 +17,14 @@ export default function HomeHeading() {
     setIsClient(true);
   }, []);
   useEffect(() => {
-    // //SMOOTH SCROLLING//
-    // const lenis = new Lenis();
-    // function raf(time: any) {
-    //   lenis.raf(time);
-    //   requestAnimationFrame(raf);
-    // }
-    // requestAnimationFrame(raf);
-    // //SMOOTH SCROLLING//
+    //SMOOTH SCROLLING//
+    const lenis = new Lenis();
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    //SMOOTH SCROLLING//
     if (isClient) {
       gsap.fromTo(
         textRef.current,
@@ -53,7 +53,7 @@ export default function HomeHeading() {
   return (
     <div className=" z-0 overflow-hidden">
       <div className="lottie-container">
-        <Lottie animationData={animationData} />
+        {/* <Lottie animationData={animationData} /> */}
       </div>
       <div
         className="absolute left-1/2 -translate-x-1/2 top-72 lg:top-80 w-[85vw] text-[6.7vw] leading-[5vw] font-bold font-hammer"
