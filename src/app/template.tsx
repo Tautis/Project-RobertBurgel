@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Loader from "../components/loader";
+import Loader from "./components/loader";
 
-export default function AboutLayout({
+export default function HomeTemplate({
   children,
 }: {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ export default function AboutLayout({
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsLoading(false), 500); // Adjust timing as needed
+    const timeout = setTimeout(() => setIsLoading(false), 500); // Adjust as needed
     return () => clearTimeout(timeout);
   }, []);
 
@@ -22,7 +22,7 @@ export default function AboutLayout({
         {isLoading && (
           <motion.div
             key="loader"
-            className="fixed inset-0 z-50 flex items-center justify-center bg-[#a31b1b]"
+            className="fixed inset-0 z-50 flex items-center justify-center"
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
