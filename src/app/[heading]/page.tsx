@@ -8,8 +8,8 @@ interface CardPageParams {
   heading: string;
 }
 
-export default async function CardPage({ params }: { params: CardPageParams }) {
-  const { heading } = await params;
+export default function CardPage({ params }: { params: CardPageParams }) {
+  const { heading } = params;
 
   const decodedHeading = decodeURIComponent(heading);
   const card = cardData.find((card) => card.heading === decodedHeading);
