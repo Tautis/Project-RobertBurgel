@@ -9,7 +9,8 @@ interface CardPageParams {
 }
 
 export default async function CardPage({ params }: { params: CardPageParams }) {
-  const { heading } = await params;
+  // Even though params isn't actually async, Next.js requires this await
+  const { heading } = params;
 
   const decodedHeading = decodeURIComponent(heading);
   const card = cardData.find((card) => card.heading === decodedHeading);
