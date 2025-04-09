@@ -13,9 +13,7 @@ interface PageProps {
 }
 
 export default function CardPage({ params }: PageProps) {
-  const { heading } = params;
-
-  const decodedHeading = decodeURIComponent(heading);
+  const decodedHeading = decodeURIComponent(params.heading);
   const card = cardData.find((card) => card.heading === decodedHeading);
   const headingsArray = cardData.map((card) => card.heading);
 
