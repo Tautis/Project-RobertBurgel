@@ -8,12 +8,8 @@ interface CardPageParams {
   heading: string;
 }
 
-interface CardPageProps {
-  params: CardPageParams;
-}
-
-export default function CardPage({ params }: CardPageProps) {
-  const { heading } = params;
+export default async function CardPage({ params }: { params: CardPageParams }) {
+  const { heading } = await params;
 
   const decodedHeading = decodeURIComponent(heading);
   const card = cardData.find((card) => card.heading === decodedHeading);
@@ -47,12 +43,12 @@ export default function CardPage({ params }: CardPageProps) {
           <Link key={index} href={`/${encodeURIComponent(item)}`} passHref>
             <span
               className={`hover:text-white cursor-pointer text-sm/8  ${
-                item === card.heading ? "text-white" : "text-[#8d8d8d]"
+                item == card.heading ? "text-white" : "text-[#8d8d8d]"
               }`}
             >
               {item.toUpperCase()}
               {index < headingsArray.length - 1 && (
-                <span className="text-yellow-500 font-bold leading-none">
+                <span className="text-yellow-500 font-bold leading-none ">
                   {" | "}
                 </span>
               )}
