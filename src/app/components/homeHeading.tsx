@@ -5,10 +5,12 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// import Lottie from "lottie-react";
-// import animationData from "../../../public/lottieAnim.json";
+import animationData from "../../../public/lottieAnim.json";
 import Lenis from "lenis";
+import dynamic from "next/dynamic";
 gsap.registerPlugin(ScrollTrigger);
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function HomeHeading() {
   const textRef = useRef(null);
@@ -53,7 +55,7 @@ export default function HomeHeading() {
   return (
     <div className=" z-0 overflow-hidden">
       <div className="lottie-container">
-        {/* <Lottie animationData={animationData} /> */}
+        <Lottie animationData={animationData} />
       </div>
       <div
         className="absolute left-1/2 -translate-x-1/2 top-72 lg:top-80 w-[85vw] text-[6.7vw] leading-[5vw] font-bold font-hammer"
