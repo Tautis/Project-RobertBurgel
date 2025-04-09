@@ -25,8 +25,10 @@ export default function Home() {
           <Arrowx rotation={270} width="30px" height="30px" color="gray" />
         </Link>
       </div>
-      <HomeHeading />
-      <div className="sticky top-0 z-999">{/* <NavBar /> */}</div>
+      {/* <HomeHeading /> */}
+      <div className="sticky top-0 z-999">
+        <NavBar />
+      </div>
 
       <div className="z-10 relative" id="start">
         <div className="grid grid-cols-1 md:grid-cols-2">
