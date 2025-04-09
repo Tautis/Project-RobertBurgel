@@ -8,7 +8,11 @@ interface CardPageParams {
   heading: string;
 }
 
-export default function CardPage({ params }: { params: CardPageParams }) {
+interface PageProps {
+  params: CardPageParams;
+}
+
+export default function CardPage({ params }: PageProps) {
   const { heading } = params;
 
   const decodedHeading = decodeURIComponent(heading);
@@ -18,7 +22,6 @@ export default function CardPage({ params }: { params: CardPageParams }) {
   if (!card) {
     notFound();
   }
-
   const galleryImages = card.gallery ? Object.values(card.gallery) : [];
 
   return (
