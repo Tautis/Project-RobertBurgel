@@ -44,7 +44,7 @@ export default function HomeHeading() {
       );
       gsap.to("#arrow", {
         y: 30,
-        x: -9,
+        x: -20,
         duration: 1.5,
         repeat: -1,
         yoyo: true,
@@ -69,7 +69,7 @@ export default function HomeHeading() {
         </p>
       </div>
       <div
-        className="absolute lg:top-[700px] top-[400px] left-1/2 -translate-x-[10px] w-fit mx-auto pt-32"
+        className="absolute lg:top-[700px] top-[400px] left-1/2 -translate-x-[20px] w-fit mx-auto pt-32"
         id="arrow"
       >
         <Link href="#start">
