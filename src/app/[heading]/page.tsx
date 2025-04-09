@@ -8,7 +8,7 @@ interface CardPageParams {
   heading: string;
 }
 
-export default async function CardPage({ params }: { params: CardPageParams }) {
+export default function CardPage({ params }: { params: CardPageParams }) {
   const { heading } = params;
 
   const decodedHeading = decodeURIComponent(heading);
