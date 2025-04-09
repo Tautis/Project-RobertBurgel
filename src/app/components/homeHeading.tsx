@@ -14,17 +14,17 @@ export default function HomeHeading() {
   const textRef = useRef(null);
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
-    setIsClient(true); // Set client-side state after component mounts
+    setIsClient(true);
   }, []);
   useEffect(() => {
-    //SMOOTH SCROLLING//
-    const lenis = new Lenis();
-    function raf(time: any) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-    //SMOOTH SCROLLING//
+    // //SMOOTH SCROLLING//
+    // const lenis = new Lenis();
+    // function raf(time: any) {
+    //   lenis.raf(time);
+    //   requestAnimationFrame(raf);
+    // }
+    // requestAnimationFrame(raf);
+    // //SMOOTH SCROLLING//
     if (isClient) {
       gsap.fromTo(
         textRef.current,

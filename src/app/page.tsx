@@ -25,7 +25,7 @@ export default function Home() {
           <Arrowx rotation={270} width="30px" height="30px" color="gray" />
         </Link>
       </div>
-      {/* <HomeHeading /> */}
+      <HomeHeading />
       <div className="sticky top-0 z-999">
         <NavBar />
       </div>
