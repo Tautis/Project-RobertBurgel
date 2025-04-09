@@ -20,7 +20,7 @@ import HomeHeading from "./components/homeHeading";
 export default function Home() {
   return (
     <div className="">
-      {/* <div className="fixed z-50 bottom-5 right-10 overflow-hidden">
+      <div className="fixed z-50 bottom-5 right-10 overflow-hidden">
         <Link href="#start">
           <Arrowx rotation={270} width="30px" height="30px" color="gray" />
         </Link>
@@ -30,7 +30,7 @@ export default function Home() {
         <NavBar />
       </div>
 
-      <div className="z-10 relative" id="start">
+      {/* <div className="z-10 relative" id="start">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="font-bold xl:text-3xl md:leading-[2vw] content-center p-14">
             <span className="w-[80%] mx-auto block">Hello and welcome.</span>
@@ -225,8 +225,8 @@ export default function Home() {
               <span>email@email.de</span>
             </div>
           </div>
-        </div>
-      </div> */}
+        </div> 
+      </div>*/}
     </div>
   );
 }
